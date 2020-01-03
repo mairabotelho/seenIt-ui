@@ -12,14 +12,15 @@ import {map} from 'rxjs/operators';
 })
 export class AuthenticationService {
 
-  constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) {}
+  constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) {
+  }
 
   singup(user: User): Observable<any> {
     return this.httpClient.post('/server/signup', user);
   }
 
-  login(login: Login){
-    return this.httpClient.post<JwtAuthResponse>('/server/login', login).pipe(map (data => {
+  login(login: Login): Observable<boolean> {
+    return this.httpClient.post<JwtAuthResponse>('/server/login', login).pipe(map(data => {
       this.localStorageService.store('authenticationToken', data.authenticationToken);
       this.localStorageService.store('username', data.username);
       return true;
