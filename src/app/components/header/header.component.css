@@ -1,16 +1,18 @@
 .header{
     padding: 5xp, 20xp;
-    background: lavenderblush;
+    padding-top: 10px;
+    background: rgb(210, 210, 224);
 }
 
 .title{
-    color:lightcoral;
+    color:black;
     text-decoration: none;
+    font-family: BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .login, .register{
     float: right;
     text-decoration: none;
-    padding-top: 15px;
-    color: lightcoral;
+    padding-top: 70px;
+    color: black;
 }

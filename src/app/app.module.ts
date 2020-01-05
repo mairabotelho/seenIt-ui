@@ -7,25 +7,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { SuccessComponent } from './components/success/success.component';
-
 
 import { UserComponent } from './components/user/user.component';
 import { UserService } from './services/user.service';
 import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
+import { MovieComponent } from './components/movie/movie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SignupComponent,
-    SuccessComponent,
 
     UserComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
