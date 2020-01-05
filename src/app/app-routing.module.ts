@@ -6,15 +6,19 @@ import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MovieComponent } from './components/movie/movie.component';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 
 
 const routes: Routes = [
-  // { path: 'home', component: HomeComponent, runGuardsAndResolvers: 'always'},
-  // { path: '', redirectTo: '/home', pathMatch: 'full' },
+  // { path: 'login', component: LoginComponent, runGuardsAndResolvers: 'always'},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'signup', component: SignupComponent},
   { path: 'users', component: UserComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'movie', component: MovieComponent}
+  { path: 'home', component: HomeComponent},
+  { path: 'movies', component: MovieComponent},
+  { path: 'searchmovie', component: SearchMovieComponent},
+
 ];
 
 @NgModule({

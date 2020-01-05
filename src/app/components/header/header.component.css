@@ -10,9 +10,16 @@
     font-family: BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.login, .register{
+.login, .register, .logout, .account{
     float: right;
     text-decoration: none;
-    padding-top: 70px;
+    padding-top: 80px;
+    color: black;
+}
+
+.add, .movie{
+    float: center;
+    text-decoration: none;
+    padding-top: 80px;
     color: black;
 }

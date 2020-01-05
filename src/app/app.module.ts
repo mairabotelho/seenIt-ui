@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { MovieComponent } from './components/movie/movie.component';
+import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MovieComponent } from './components/movie/movie.component';
     UserComponent,
     LoginComponent,
     HomeComponent,
-    MovieComponent
+    MovieComponent,
+    SearchMovieComponent
   ],
   imports: [
     BrowserModule,

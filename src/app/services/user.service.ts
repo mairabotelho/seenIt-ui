@@ -15,7 +15,6 @@ export class UserService {
 
   private url: string;
   public currentUser: User;
-  private loggedIn: boolean = false;
 
   constructor(private http: HttpClient, private router: Router) { }
 

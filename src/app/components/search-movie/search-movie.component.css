@@ -1,0 +1,21 @@
+.title{
+    font-size: 30px;
+}
+
+.results{
+    font-size: 15px;
+    padding: 80px;
+}
+
+.btn{
+background: gray;
+justify-content: space-between; 
+}
+
+.table { 
+    display: block;
+}
+
+.search { 
+    margin-bottom: 10px; 
+}

@@ -10,7 +10,7 @@ import {map} from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
+export class AuthService {
 
   constructor(private httpClient: HttpClient, private localStorageService: LocalStorageService) {
   }
@@ -25,5 +25,14 @@ export class AuthenticationService {
       this.localStorageService.store('username', data.username);
       return true;
     }));
+  }
+
+  isAuthenticated(): boolean {
+    return this.localStorageService.retrieve('username') != null;
+  }
+
+  logout() {
+    this.localStorageService.clear('authenticationToken');
+    this.localStorageService.clear('username');
   }
 }
