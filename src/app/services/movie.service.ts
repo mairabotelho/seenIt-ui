@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Movie } from '../models/movie';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +19,11 @@ export class MovieService {
   }
 
   addMovie(movie: Movie){
-    return this.http.post('/server/movies', movie);
+    return this.http.post(environment.baseUrl + '/movies', movie);
   }
 
   public getMovies() {
-    return this.http.get<Movie[]>('/server/movies/all');
+    return this.http.get<Movie[]>(environment.baseUrl + '/movies/all');
   }
 
 
