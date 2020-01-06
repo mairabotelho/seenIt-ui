@@ -1,13 +1,8 @@
 .header{
-<<<<<<< HEAD
-    padding: 10xp, 10xp;
-    padding-top: 5px;
-    background: rgb(227, 220, 230);
-=======
+
     padding: 5xp, 20xp;
     padding-top: 10px;
     background: rgb(210, 210, 224);
->>>>>>> dev
 }
 
 .title{
@@ -21,8 +16,6 @@
     text-decoration: none;
     padding-top: 80px;
     color: black;
-<<<<<<< HEAD
-=======
 }
 
 .add, .movie{
@@ -30,5 +23,4 @@
     text-decoration: none;
     padding-top: 80px;
     color: black;
->>>>>>> dev
 }
