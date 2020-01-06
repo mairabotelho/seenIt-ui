@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user';
-import { AuthenticationService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -14,7 +14,7 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   user: User;
 
-  constructor(private formBuilder: FormBuilder, private authenticatinService: AuthenticationService,
+  constructor(private formBuilder: FormBuilder, private authService: AuthService,
      private router: Router) {
 
     this.signupForm = this.formBuilder.group({
@@ -47,7 +47,7 @@ export class SignupComponent implements OnInit {
     this.user.password = this.signupForm.get('password').value;
     this.user.confirmPassword = this.signupForm.get('confirmPassword').value;
 
-    this.authenticatinService.singup(this.user).subscribe(data => {
+    this.authService.singup(this.user).subscribe(data => {
       console.log('User created');
       alert("User created successfully.");
       this.router.navigateByUrl('/login');

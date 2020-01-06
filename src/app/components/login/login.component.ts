@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { AuthenticationService } from 'src/app/services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Login } from 'src/app/models/login';
 
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit{
   loginForm: FormGroup;
   login: Login
 
-  constructor(private authenticationService: AuthenticationService, private router: Router) {
+  constructor(private authenticationService: AuthService, private router: Router) {
 
     this.loginForm = new FormGroup({
       username: new FormControl(),
@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit{
     this.authenticationService.login(this.login).subscribe(data => {
       if (data) {
         console.log('login success');
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/home');
       } else {
         console.log('Login failed');
       }
