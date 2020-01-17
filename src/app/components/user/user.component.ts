@@ -19,13 +19,13 @@ export class UserComponent implements OnInit {
       .subscribe( data => {
         this.users = data;
       });
-  };
+  }
 
   deleteUser(user: User): void {
     this.userService.deleteUser(user.username)
       .subscribe( data => {
         this.users = this.users.filter(u => u !== user);
-      })
-  };
+      });
+  }
 
 }

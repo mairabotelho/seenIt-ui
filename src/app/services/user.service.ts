@@ -3,32 +3,31 @@ import { User } from '../models/user';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment'
 
 const httpOptions = {
   headers: new HttpHeaders ({ 'Content-Type': 'application/json' })
 };
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class UserService {
 
   private url: string;
   public currentUser: User;
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router) { 
+    this.url = environment.url;
+  }
 
-  private userUrl = '/server/users';
- 
   public getUsers() {
-    return this.http.get<User[]>(this.userUrl);
+    return this.http.get<User[]>(this.url + "/users");
   }
 
   public deleteUser(username: string) {
-    return this.http.delete<Boolean>(this.userUrl + "/" + username);
+    return this.http.delete<boolean>(this.url + "/users/" + username);
   }
 
-  public findUserByUsername(username: string): Observable<User>{
-    return this.http.get<User>(this.userUrl + username);
+  public findUserByUsername(username: string): Observable<User> {
+    return this.http.get<User>(this.url + "/users/" + username);
   }
 }

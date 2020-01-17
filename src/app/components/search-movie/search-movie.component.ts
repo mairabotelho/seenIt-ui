@@ -11,25 +11,24 @@ import { Router } from '@angular/router';
 })
 export class SearchMovieComponent implements OnInit {
 
-  movies : Movie[];
+  movies: Movie[];
   movie: string;
 
   constructor(private movieService: MovieService, private router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   search() {
-    this.movieService.search(this.movie).subscribe((data:any)=>{
-      console.log(data)
+    this.movieService.search(this.movie).subscribe(( data: any ) => {
+      console.log( data );
       this.movies = data.results;
-    })
+    });
   }
 
   addMovie(movie: Movie) {
     this.movieService.addMovie(movie).subscribe( data => {
       this.movies = this.movies.filter(u => u !== movie);
-    })
+    });
   }
 
 }

@@ -14,13 +14,12 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup;
   user: User;
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService,
-     private router: Router) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router) {
 
     this.signupForm = this.formBuilder.group({
       username: '',
       firstName: '',
-      lastName:'',
+      lastName: '',
       email: '',
       password: '',
       confirmPassword: ''
@@ -29,7 +28,7 @@ export class SignupComponent implements OnInit {
     this.user = {
       username: '',
       firstName: '',
-      lastName:'',
+      lastName: '',
       email: '',
       password: '',
       confirmPassword: ''
@@ -49,12 +48,7 @@ export class SignupComponent implements OnInit {
 
     this.authService.singup(this.user).subscribe(data => {
       console.log('User created');
-      alert("User created successfully.");
-      this.router.navigateByUrl('/login');
-    }, error => {
-      console.log('register failed'); 
-    });
-  }
-
-  
-}
+      alert('User created successfully ');
+      this.router.navigateByUrl('/login'); },
+    error => {console.log('register failed'); } );
+  }}

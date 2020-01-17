@@ -20,6 +20,6 @@ export class MovieComponent implements OnInit {
     .subscribe( data => {
       this.movies = data;
     });
-};
+}
 
 }

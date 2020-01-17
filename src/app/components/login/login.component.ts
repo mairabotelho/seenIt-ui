@@ -11,10 +11,10 @@ import { Login } from 'src/app/models/login';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
-  login: Login
+  login: Login;
 
   constructor(private authenticationService: AuthService, private router: Router) {
 
@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit{
 
     this.authenticationService.login(this.login).subscribe(data => {
       if (data) {
+
         console.log('login success');
         this.router.navigateByUrl('/home');
       } else {
