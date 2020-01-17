@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from '../models/user';
+import { Users } from '../models/users';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
@@ -13,14 +13,14 @@ const httpOptions = {
 export class UserService {
 
   private url: string;
-  public currentUser: User;
+  public currentUser: Users;
 
   constructor(private http: HttpClient, private router: Router) { 
     this.url = environment.url;
   }
 
   public getUsers() {
-    return this.http.get<User[]>(this.url + "/users");
+    return this.http.get<Users[]>(this.url + "/users");
   }
 
   public deleteUser(username: string) {
@@ -28,6 +28,6 @@ export class UserService {
   }
 
   public findUserByUsername(username: string): Observable<User> {
-    return this.http.get<User>(this.url + "/users/" + username);
+    return this.http.get<Users>(this.url + "/users/" + username);
   }
 }

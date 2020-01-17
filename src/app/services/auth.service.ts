@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../models/user';
+import { Users } from '../models/users';
 import { Observable } from 'rxjs';
 import { Login } from '../models/login';
 import { JwtAuthResponse } from '../models/jwt-auth-response';
@@ -17,7 +17,7 @@ export class AuthService {
     this.url = environment.url;
   }
 
-  singup(user: User): Observable<any> {
+  singup(user: Users): Observable<any> {
     return this.httpClient.post(this.url + '/signup', user);
   }
 
