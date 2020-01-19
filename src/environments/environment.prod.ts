@@ -1,6 +1,6 @@
 export const environment = {
 
   production: true,
-  url: 'https://seenit.herokuapp.com'
+  url: 'https://seenit-backend.herokuapp.com'
   
 };
