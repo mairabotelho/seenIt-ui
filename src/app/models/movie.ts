@@ -1,5 +1,6 @@
 export class Movie {
-    id: number;
+    
+    username: string;
     title: string;
     original_language: string;
     original_title: string;

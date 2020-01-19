@@ -3,6 +3,7 @@ import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/models/movie';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Component({
   selector: 'app-movie',
@@ -11,12 +12,15 @@ import { Router } from '@angular/router';
 })
 export class MovieComponent implements OnInit {
 
-  movies: Movie[];
+  movies: Movie[]
+  private username: string
 
-  constructor(private router: Router, private movieService: MovieService) { }
+  constructor(private localStorageService: LocalStorageService, private router: Router, private movieService: MovieService) { 
+    this.username = this.localStorageService.retrieve('username')
+  }
 
   ngOnInit() {
-    this.movieService.getMovies()
+    this.movieService.getMovies(this.username)
     .subscribe( data => {
       this.movies = data;
     });

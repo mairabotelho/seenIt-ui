@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Movie } from '../models/movie';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment'
+import { LocalStorageService } from 'ngx-webstorage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
 
-  constructor(private http: HttpClient) {
+  private url: string
+
+  constructor(private localStorageService: LocalStorageService, private http: HttpClient) {
+    this.url = environment.url
+    
   }
 
   search(movie: string) {
@@ -17,11 +22,11 @@ export class MovieService {
   }
 
   addMovie(movie: Movie){
-    return this.http.post('/server/movies', movie);
+    return this.http.post(this.url + '/movies', movie);
   }
 
-  public getMovies() {
-    return this.http.get<Movie[]>('/server/movies/all');
+  public getMovies(username: string) {
+    return this.http.get<Movie[]>(this.url + '/movies/all/' + username);
   }
 
 
