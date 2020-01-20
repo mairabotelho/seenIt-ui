@@ -1,24 +1,7 @@
-.title{
-    font-size: 30px;
-}
-
 .results{
     font-size: 15px;
     padding: 80px;
     color:white;
-}
-
-.btn{
-background: gray;
-justify-content: space-between; 
-}
-
-.table { 
-    display: block;
-}
-
-.search { 
-    margin-bottom: 10px; 
 }
 
 .jumbotron{
@@ -29,15 +12,7 @@ justify-content: space-between;
     padding-bottom: 30px; 
     margin-top: 140px;  
     margin-bottom: 30px;
-    margin-left: 120px;
-    margin-right: 120px;
   }
-
-  .title{
-    font-size: 50px; 
-    text-align: center;
-    color: rgb(168, 81, 78);   
-}
 
 .form-group{
     text-align: center;
@@ -45,8 +20,13 @@ justify-content: space-between;
 
 .btn{
     background-color: rgb(172, 137, 73);
+    margin-top: 80%;
 }
 
 .button{
     text-align: center;
+}
+
+.results{
+    text-align: justify;
 }

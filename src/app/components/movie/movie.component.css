@@ -1,4 +1,39 @@
 .card{
 
-    margin: 20%;
+    margin: 40%;
+    background: rgb(30, 30, 30);
+    opacity: 90%;
+    width: 8rem;
+    height: 25rem;
+    display: grid;
+    grid-template-columns: repeat(8, 170px); 
+    border: 1px solid #d3d3d3;
+  border-radius: .25rem;
+}
+
+.card-body{
+    padding: 15px;
+  }
+
+.card-title{
+    font-size: 17px;
+    color: rgb(119, 119, 119);
+    text-align: center;
+}
+
+.card-subtitle{
+    font-size: 14px;
+    color: rgb(119, 119, 119);
+    text-align: center;
+
+}
+
+.poster{
+    margin-top: 20%;
+
+
+}
+
+.btn{
+    position: bottom;
 }
