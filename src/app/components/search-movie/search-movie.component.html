@@ -1,24 +1,20 @@
-<h1><a class="title"> Search for movies</a></h1>
-  <div class="search">
-   <input [(ngModel)]="movie"/><button (click)="search()">Search</button>
-  </div>
-
+<div class="container">
+<div class="jumbotron">
   <table class="table table-striped" *ngIf="movies">
-    <tr>
-      <th>Title</th>
-      <th>Overview</th>
-      <th>Release Date</th>
-      <th>Poster</th>
-      <th></th>
-    </tr>
     <tbody>
     <tr class="results table-striped" *ngFor="let movie of movies">
+      <td><img [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path" height="150%" /></td>
       <td>{{movie.title}}</td>
       <td>{{movie.overview}}</td>
       <td>{{movie.release_date}}</td>
-      <td><img [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path" height="180px" width="130px"/></td>
-      <td><button class="btn btn-default" (click)="addMovie(movie)"> seenIt</button></td>
+      <div class= "button">
+        <td><button class="btn btn-default" (click)="addMovie(movie)"> seenIt</button></td>      
+      </div>
     </tr>
   </tbody>
   </table>
+</div>
+</div> 
+
+
     
