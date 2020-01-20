@@ -16,8 +16,6 @@ import { MovieService } from 'src/app/services/movie.service';
 })
 export class HeaderComponent implements OnInit {
 
-  movies: Movie[];
-
   constructor(public authService: AuthService, public router: Router, private movieService: MovieService) {
   }
 
