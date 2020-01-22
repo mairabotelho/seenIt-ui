@@ -39,8 +39,9 @@ export class LoginComponent implements OnInit{
     this.authenticationService.login(this.login).subscribe(data => {
       if (data) {
         console.log('login success');
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/homepage');
       } else {
+        alert('The email or password did not match our records. Please try again.')
         console.log('Login failed');
       }
     });

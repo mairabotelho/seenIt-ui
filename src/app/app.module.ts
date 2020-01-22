@@ -16,6 +16,7 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { MovieComponent } from './components/movie/movie.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { MDBBootstrapModule, MdbCardComponent} from 'angular-bootstrap-md';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MDBBootstrapModule, MdbCardComponent} from 'angular-bootstrap-md';
     LoginComponent,
     HomeComponent,
     MovieComponent,
-    SearchMovieComponent
+    SearchMovieComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

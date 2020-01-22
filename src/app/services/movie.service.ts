@@ -10,6 +10,7 @@ import { LocalStorageService } from 'ngx-webstorage';
 export class MovieService {
 
   private url: string
+  currentPage = 0
 
   constructor(private localStorageService: LocalStorageService, private http: HttpClient) {
     this.url = environment.url
@@ -18,7 +19,7 @@ export class MovieService {
 
   search(movie: string) {
       return this.http
-      .get<Movie[]>(`https://api.themoviedb.org/3/search/movie?api_key=40cdd3b4b71fd5f548fa95e11561ece2&query=${movie}`);
+      .get<Movie[]>(`https://api.themoviedb.org/3/search/movie?api_key=40cdd3b4b71fd5f548fa95e11561ece2&query=${movie}` );
   }
 
   addMovie(movie: Movie){

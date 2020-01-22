@@ -27,9 +27,7 @@ export class SearchMovieComponent implements OnInit  {
 
      this.router.events.subscribe((evt) => {
         if (evt instanceof NavigationEnd) {
-           // trick the Router into believing it's last link wasn't previously loaded
            this.router.navigated = false;
-           // if you need to scroll back to top, here is the right place
            window.scrollTo(0, 0);
         }
     });
@@ -46,6 +44,11 @@ export class SearchMovieComponent implements OnInit  {
     this.movieService.search(newmovie).subscribe((data:any)=>{
       console.log(data)
       this.movies = data.results;
+
+      if(data.results == 0){
+        this.router.navigateByUrl('/homepage');
+        alert("This title doesn't exist, try again.");
+      }
     })
   }
 

@@ -7,7 +7,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 
 const routes: Routes = [
@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent},
   { path: 'movies', component: MovieComponent},
-  { path: 'searchmovie/:movie', component: SearchMovieComponent}
+  { path: 'searchmovie/:movie', component: SearchMovieComponent},
+  { path: 'homepage', component: HomepageComponent}
 
 ];
 
