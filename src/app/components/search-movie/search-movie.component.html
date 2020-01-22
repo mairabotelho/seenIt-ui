@@ -3,7 +3,7 @@
     <mat-grid-tile class="hvrbox"> 
         <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="Image not available">
         <div class="hvrbox-layer_top">
-          <div class="hvrbox-text" (click)="open()" >{{movie.title}}</div>
+          <div class="hvrbox-text" (click)="addMovie(movie)" >{{movie.title}}</div>
       </div>
     </mat-grid-tile>
   </div>
