@@ -16,7 +16,10 @@ import { NgxWebstorageModule } from 'ngx-webstorage';
 import { MovieComponent } from './components/movie/movie.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { MDBBootstrapModule, MdbCardComponent} from 'angular-bootstrap-md';
+import {MatGridListModule} from '@angular/material'
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { MoviedetailsComponent } from './components/moviedetails/moviedetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     HomeComponent,
     MovieComponent,
     SearchMovieComponent,
-    HomepageComponent
+    HomepageComponent,
+    MoviedetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +43,8 @@ import { HomepageComponent } from './components/homepage/homepage.component';
     ReactiveFormsModule,
     NgxWebstorageModule.forRoot(),
     MDBBootstrapModule.forRoot(),
+    MatGridListModule,
+    BrowserAnimationsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { MoviedetailsComponent } from './components/moviedetails/moviedetails.component'
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent},
   { path: 'movies', component: MovieComponent},
   { path: 'searchmovie/:movie', component: SearchMovieComponent},
+  { path: 'moviedetails/:movie', component: MoviedetailsComponent},
   { path: 'homepage', component: HomepageComponent}
 
 ];

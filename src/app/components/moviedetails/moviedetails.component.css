@@ -1,0 +1,37 @@
+.display{
+    font-size: 15px;
+    padding: 80px;
+    color: white;
+    image-resolution: 100%;
+}
+
+.cl1{
+    width: 23%;
+}
+
+.image{
+    image-resolution: 100%;
+}
+
+.title{
+    font-size: 250%;
+}
+
+
+.jumbotron{
+    background: rgb(30, 30, 30);  
+    opacity: 90%; 
+    padding-top: 30px;
+    padding-bottom: 30px; 
+    margin-top: 140px;  
+    margin-bottom: 30px;
+  }
+
+.btn{
+    background-color: rgb(172, 137, 73);
+    margin-top: 20%;
+}
+
+.button{
+    text-align: center;
+}

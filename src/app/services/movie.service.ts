@@ -32,10 +32,14 @@ export class MovieService {
 
   public deleteMovie(username : string, id: number){
     let string = id.toString();
-    const params = new HttpParams()
-      .set('id', string);
+    const params = new HttpParams().set('id', string);
 
     return this.http.delete<Boolean>(this.url + '/movies/' + username, {params});
+  }
+
+  findMovie(movie:string, username: string){
+    const params = new HttpParams().set('movieTitle', movie).set('username', username);
+    return this.http.get<Movie>(this.url + '/movies', {params});
   }
 
 }

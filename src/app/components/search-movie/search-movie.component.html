@@ -1,20 +1,14 @@
-<div class="container">
-<div class="jumbotron">
-
-  <table class="table" *ngIf="movies">
-   <tbody>
-    <tr class="results table-striped" *ngFor="let movie of movies">
-      <td><img [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path" height="150%"/></td>
-      <td> {{movie.title}} ({{movie.release_date}})<br><br>{{movie.overview}}</td>
-      <div class= "button">
-        <td><button class="btn btn-default" (click)="addMovie(movie)"> seenIt</button></td>      
+<mat-grid-list cols="7" rowHeight="2:3">
+  <div class="results"  *ngFor="let movie of movies">
+    <mat-grid-tile class="hvrbox"> 
+        <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="Image not available">
+        <div class="hvrbox-layer_top">
+          <div class="hvrbox-text" (click)="open()" >{{movie.title}}</div>
       </div>
-    </tr>
-  </tbody>
-  </table>
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>
 
-</div>
-</div> 
 
 
     

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/services/movie.service';
 import { Movie } from 'src/app/models/movie';
-import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { LocalStorageService } from 'ngx-webstorage';
 

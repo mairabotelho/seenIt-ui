@@ -1,25 +1,13 @@
-<br><br><br>
-<div class="row">
-<div class="results"  *ngFor="let movie of movies">
-  <div class="column">     
-  <div class="card">  
-      <!--Card image-->
-    <div class="view">
-      <img class="card-img-top" [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path" alt="Movie Poster" style="width:80px; height:120px;">
-      <a href="#">
-      <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-      <!--Card content-->
-    <div class="card-text">
-      <h4 class="card-title">{{movie.title}}</h4>
-      <p class="card-subtitle">{{movie.release_date}} {{movie.id}}</p>
-    </div> 
-    <button href="#" class="btn success" layout="end-center">Button</button>
-    <td><button class="btn btn-danger" (click)="deleteMovie(movie)"> Delete User</button></td>
-    <button class="btn success" layout="end-center" (click)="deleteMovie(movie)">Delete</button>
+
+<mat-grid-list cols="15" rowHeight="2:3">
+  <div class="results"  *ngFor="let movie of movies">
+    <mat-grid-tile class="hvrbox"> 
+        <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="Image not available">
+        <div class="hvrbox-layer_top" [routerLink]="['/moviedetails', movie.title]">
+          <div class="hvrbox-text" >{{movie.title}}</div>
+      </div>
+    </mat-grid-tile>
   </div>
-</div>
-</div>
+</mat-grid-list>
 
   

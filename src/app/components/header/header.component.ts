@@ -1,8 +1,6 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router, NavigationEnd } from '@angular/router';
-import { SearchMovieComponent } from '../search-movie/search-movie.component';
-import { Movie } from 'src/app/models/movie';
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({

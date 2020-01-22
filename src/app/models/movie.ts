@@ -8,7 +8,12 @@ export class Movie {
     overview: string;
     release_date: string;
     poster_path: string;
+    backdrop_path: string;
     popularity: DoubleRange;
+    comment: string
+    rate: number
+    favorite: boolean
+    watchlist: boolean
   
 }
 
