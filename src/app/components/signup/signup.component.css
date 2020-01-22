@@ -17,12 +17,25 @@
 }
 
 .form-group{
-    text-align: center;
+    text-align: center; 
 }
 
 .btn{
+    color: rgb(172, 137, 73);
+    border: 2px solid rgb(172, 137, 73);
+    cursor: pointer;
+  }
+  
+  .success {
+      border-color: rgb(172, 137, 73);
+      color: rgb(172, 137, 73);
+    }
+    
+  .success:hover {
     background-color: rgb(172, 137, 73);
-}
+    color: black;   
+  }
+  
 
 .button{
     text-align: center;

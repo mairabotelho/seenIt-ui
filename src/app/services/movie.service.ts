@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Movie } from '../models/movie';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment'
 import { LocalStorageService } from 'ngx-webstorage';
 
@@ -29,5 +29,12 @@ export class MovieService {
     return this.http.get<Movie[]>(this.url + '/movies/all/' + username);
   }
 
+  public deleteMovie(username : string, id: number){
+    let string = id.toString();
+    const params = new HttpParams()
+      .set('id', string);
+
+    return this.http.delete<Boolean>(this.url + '/movies/' + username, {params});
+  }
 
 }

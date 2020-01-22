@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-faded">
-  <a class="navbar-brand" href="/homepage"><img src="../../../assets/logo.png" height="60px" width="140px"></a>
+  <a class="navbar-brand" href="/homepage"><img src="../../../assets/logo.png" height="70px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
         aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
       <span class="navbar-toggler-icon"></span>
@@ -11,25 +11,24 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="/movies" *ngIf="authService.isAuthenticated()">My Movies</a>
+          <a class="nav-link" href="/movies" *ngIf="authService.isAuthenticated()"><img src="../../../assets/movies.png" height="30px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/home" *ngIf="authService.isAuthenticated()" >My Account</a>
+          <a class="nav-link" href="/home" *ngIf="authService.isAuthenticated()"><img src="../../../assets/account.png" height="30px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link-btn btn btn-default" (click)="logout()" *ngIf="authService.isAuthenticated()">Logout</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/login" *ngIf="!authService.isAuthenticated()" >Sign In</a>
+          <a class="nav-link" (click)="logout()" *ngIf="authService.isAuthenticated()"><img src="../../../assets/logout.png" height="30px"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/signup" *ngIf="!authService.isAuthenticated()" >Create Account</a>
+          <a class="nav-link" href="/login" *ngIf="!authService.isAuthenticated()" ><img src="../../../assets/signin.png" height="30px"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup" *ngIf="!authService.isAuthenticated()" ><img src="../../../assets/create.png" height="33px"></a>
         </li>
       </div>
       <form class="form-inline my-2 my-sm-0" *ngIf="authService.isAuthenticated()">
         <input class="form-control mr-sm-2" [(ngModel)]="movie"  [ngModelOptions]="{standalone: true}" placeholder="Search movies" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" [routerLink]="['/searchmovie', movie]">Search</button>
+        <button class="btn success my-2 my-sm-0" [routerLink]="['/searchmovie', movie]">Search</button>
       </form>
 
     </div>

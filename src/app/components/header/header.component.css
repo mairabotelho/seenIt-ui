@@ -7,11 +7,15 @@
 
 .navbar-dark .navbar-nav .nav-link{
   color: rgb(119, 119, 119);
+  cursor: pointer;
 }
 
-.nav-link-btn{
-  color: rgb(102, 83, 83);
+.nav:hover{
+  color: rgb(172, 137, 73);
+}
 
+.nav-item{
+  padding-top: 1%;
 }
 
 .search{
@@ -23,4 +27,22 @@ body {
     font-family: Arial, Helvetica, sans-serif;
   }
 
+.btn{
+  cursor: pointer;
+}
+
+.success {
+    border-color: rgb(172, 137, 73);
+    color: rgb(172, 137, 73);
+  }
+  
+.success:hover {
+  background-color: rgb(172, 137, 73);
+  color: black;   
+}
+
+.form-control{
+  background-color: rgb(190, 190, 190);
+  height: 30px;
+}
 

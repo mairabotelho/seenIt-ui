@@ -1,32 +1,36 @@
 .jumbotron{
-    box-sizing: border-box;
-    background: rgb(30, 30, 30);  
-    opacity: 95%; 
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 140px;  
-    margin-bottom: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+  background: rgb(30, 30, 30);  
+  opacity: 95%; 
+  padding-top: 2%;
+  padding-bottom: 5%;
+  margin-top: 140px;  
+  margin-bottom: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
   }
 
-  .container{
-      size: 50%;
-  }
-
-.display{
-    font-size: 60px; 
-    text-align: center;
-    color: rgb(168, 81, 78);   
+.container{
+  size: 50%;
 }
 
 .lead, .my{
-    text-align: center;
-    color: rgba(189, 189, 189, 0.897);   
+  text-align: center;
+  color: rgba(189, 189, 189, 0.897);  
+   font-size-adjust: 5px;
 }
 
 .btn{
-    background-color: rgb(172, 137, 73);
+  cursor: pointer;
+}
+
+.success {
+  border-color: rgb(172, 137, 73);
+  color: rgb(172, 137, 73);
+}
+  
+.success:hover {
+  background-color: rgb(172, 137, 73);
+  color: black;   
 }
 
 .button{

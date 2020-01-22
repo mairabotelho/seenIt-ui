@@ -15,6 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { MovieComponent } from './components/movie/movie.component';
 import { SearchMovieComponent } from './components/search-movie/search-movie.component';
+import { MDBBootstrapModule, MdbCardComponent} from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { SearchMovieComponent } from './components/search-movie/search-movie.com
     FormsModule,
     ReactiveFormsModule,
     NgxWebstorageModule.forRoot(),
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

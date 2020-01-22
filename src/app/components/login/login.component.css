@@ -10,7 +10,7 @@
     margin-right: 120px;
   }
 
-  .title{
+.title{
     font-size: 50px; 
     text-align: center;
     color: rgb(168, 81, 78);   
@@ -21,8 +21,21 @@
 }
 
 .btn{
-    background-color: rgb(172, 137, 73);
+    color: rgb(172, 137, 73);
+    border: 2px solid rgb(172, 137, 73);
+    cursor: pointer;
+  }
+  
+.success {
+    border-color: rgb(172, 137, 73);
+    color: rgb(172, 137, 73);
 }
+    
+.success:hover {
+    background-color: rgb(172, 137, 73);
+    color: black;   
+}
+  
 
 .button{
     text-align: center;

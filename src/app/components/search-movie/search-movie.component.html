@@ -3,7 +3,7 @@
   <table class="table" *ngIf="movies">
     <tbody>
     <tr class="results table-striped" *ngFor="let movie of movies">
-      <td><img [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path" height="150%" /></td>
+      <td><img [src]="'http://image.tmdb.org/t/p/w92' + movie.poster_path" height="150%"/></td>
       <td> {{movie.title}} ({{movie.release_date}})<br><br>{{movie.overview}}</td>
       <div class= "button">
         <td><button class="btn btn-default" (click)="addMovie(movie)"> seenIt</button></td>      
