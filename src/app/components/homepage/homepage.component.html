@@ -4,8 +4,10 @@
       <mat-grid-tile class="hvrbox"> 
           <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="{{movie.title}}">
           <div class="hvrbox-layer_top">
-            <div class="hvrbox-text" (click)="openScrollableContent(longContent)" >{{movie.title}}</div>
+            <div class="hvrbox-text">{{movie.title}}</div>
         </div>
       </mat-grid-tile>
     </div>
   </mat-grid-list>
+
+  <!-- (click)="openScrollableContent(longContent)"  -->
