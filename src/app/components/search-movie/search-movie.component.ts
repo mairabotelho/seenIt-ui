@@ -1,4 +1,4 @@
-import { Component, OnInit, Injectable, OnDestroy } from '@angular/core';
+import { Component, OnInit, Injectable} from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { MovieService } from 'src/app/services/movie.service';
 import { Router, NavigationEnd } from '@angular/router';
@@ -11,15 +11,15 @@ import { ActivatedRoute } from '@angular/router'
   styleUrls: ['./search-movie.component.css']
 })
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({providedIn: 'root'})
 export class SearchMovieComponent implements OnInit  {
 
   movies: Movie[]
+  movieCurrent: Movie
   searchMovie: string
 
-  constructor(public movieService: MovieService, public router: Router, public localStorageService: LocalStorageService, private route: ActivatedRoute){
+  constructor(public movieService: MovieService, public router: Router, public localStorageService: LocalStorageService, 
+    private route: ActivatedRoute){
 
       this.router.routeReuseStrategy.shouldReuseRoute = function(){
         return false;
@@ -54,9 +54,14 @@ export class SearchMovieComponent implements OnInit  {
 
   addMovie(movie: Movie) {
     movie.username = this.localStorageService.retrieve('username')
-    this.movieService.addMovie(movie).subscribe( data => {
-      this.movies = this.movies.filter(u => u !== movie);
-    })
+      this.movieService.addMovie(movie).subscribe( data => {
+        if(data){
+          this.movies = this.movies.filter(u => u !== movie);
+        }else{
+          alert("Movie already added")
+        }
+      })
   }
+
 
 }

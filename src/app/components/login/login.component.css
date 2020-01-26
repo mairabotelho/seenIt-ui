@@ -4,17 +4,11 @@
     opacity: 90%; 
     padding-top: 30px;
     padding-bottom: 30px; 
-    margin-top: 140px;  
-    margin-bottom: 30px;
-    margin-left: 120px;
-    margin-right: 120px;
+    margin-top: 20%; 
+    margin-bottom: 15%; 
+    margin-left: 20%;
+    margin-right: 20%;
   }
-
-.title{
-    font-size: 50px; 
-    text-align: center;
-    color: rgb(168, 81, 78);   
-}
 
 .form-group{
     text-align: center;
@@ -29,14 +23,13 @@
 .success {
     border-color: rgb(172, 137, 73);
     color: rgb(172, 137, 73);
-}
+}   
     
 .success:hover {
     background-color: rgb(172, 137, 73);
     color: black;   
 }
   
-
 .button{
     text-align: center;
 }

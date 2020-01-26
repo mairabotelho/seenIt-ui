@@ -41,10 +41,11 @@ export class LoginComponent implements OnInit{
         console.log('login success');
         this.router.navigateByUrl('/homepage');
       } else {
-        alert('The email or password did not match our records. Please try again.')
         console.log('Login failed');
       }
-    });
+    },
+    error => alert('The username or password did not match our records. Please try again.')
+  );
   }
 
 }

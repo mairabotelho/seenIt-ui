@@ -1,0 +1,9 @@
+.footer{
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+    background: rgb(30, 30, 30);
+    max-width: 100%;
+    opacity: 95%;
+    text-align: right;
+  }

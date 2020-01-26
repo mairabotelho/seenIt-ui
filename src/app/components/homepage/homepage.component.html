@@ -1,1 +1,11 @@
-<p>homepage works!</p>
+<mat-grid-list cols="5" rowHeight="2:3">
+    <h1 class="title">Hello {{username}}! Checkout movies trending today</h1>
+    <div class="results"  *ngFor="let movie of movies">
+      <mat-grid-tile class="hvrbox"> 
+          <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="{{movie.title}}">
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text" (click)="openScrollableContent(longContent)" >{{movie.title}}</div>
+        </div>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>

@@ -1,12 +1,19 @@
 .navbar{
-  padding-top: 10px;
+  padding-top: 1%;
+  padding-left: 1%;
   background: rgb(30, 30, 30);
   max-width: 100%;
-  opacity: 95%;
+  height: 10%;
+  opacity: 96%;
 }
 
-.navbar-dark .navbar-nav .nav-link{
-  color: rgb(119, 119, 119);
+.navbar-nav .nav-link{
+	color: rgb(223, 185, 104);
+  cursor: pointer;
+}
+
+.navbar-nav .nav-link:hover{
+  color: rgb(113, 185, 233);
   cursor: pointer;
 }
 
@@ -14,18 +21,9 @@
   color: rgb(172, 137, 73);
 }
 
-.nav-item{
-  padding-top: 1%;
-}
-
 .search{
   text-align: right;
 }
-
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
 
 .btn{
   cursor: pointer;

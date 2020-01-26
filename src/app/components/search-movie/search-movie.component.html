@@ -1,13 +1,15 @@
-<mat-grid-list cols="7" rowHeight="2:3">
+<mat-grid-list cols="5" rowHeight="2:3">
   <div class="results"  *ngFor="let movie of movies">
     <mat-grid-tile class="hvrbox"> 
-        <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="Image not available">
-        <div class="hvrbox-layer_top">
-          <div class="hvrbox-text" (click)="addMovie(movie)" >{{movie.title}}</div>
+        <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="{{movie.title}}">
+        <div class="hvrbox-layer_top" (click)="addMovie(movie)">
+          <div class="hvrbox-text" >{{movie.title}}</div>
       </div>
     </mat-grid-tile>
   </div>
 </mat-grid-list>
+
+
 
 
 

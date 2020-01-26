@@ -1,21 +1,22 @@
-<div class="container">    
-  <div class="jumbotron">
-    <tr class="display table">
-      <td class=cl1>
-        <img class="image" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" height="20%"/><br><br>
-        <p>Release Date: {{movie.release_date}}</p>
-        <p>Original Languague: {{movie.original_language}}</p>
-        <p>Popularity: {{movie.popularity}}</p>
-      <td> 
-        <h1 class="title">{{movie.title}}</h1><br>
-        <p>Original Title: {{movie.original_title}}</p>
-        <p>{{movie.overview}}</p>
-        <p>{{movie.comment}}</p>
-        <p>{{movie.rate}}</p>
-      </td>
-    </tr>
-    <li class="button">
-      <a class="btn success" href="/movies">Go Back</a>
-    </li>
+<img class="background-image" [src]="'http://image.tmdb.org/t/p/original' + movie.backdrop_path" style="background-color: black;"/>
+
+  <div class="button">
+    <a class="btn success" (click)="cancel()">Go Back</a>
   </div>
+
+  <div class="container">    
+      <tr class="display table">
+        <td class=cl1>
+          <img class="image" [src]="'http://image.tmdb.org/t/p/w780' + movie.poster_path" height="40%"/><br><br>
+        <td class="cl2"> 
+          <h1 class="title">{{movie.title}}</h1><br>
+          <p>Original Title: {{movie.original_title}}</p>
+          <p>Release Date: {{movie.release_date}}</p>
+          <p>Original Languague: {{movie.original_language}}</p>
+          <p>Popularity: {{movie.popularity}}</p>
+          <p>{{movie.overview}}</p>
+          <p>{{movie.comment}}</p>
+          <p>{{movie.rate}}</p>
+        </td>
+      </tr>
   </div>

@@ -22,6 +22,10 @@ export class MovieService {
       .get<Movie[]>(`https://api.themoviedb.org/3/search/movie?api_key=40cdd3b4b71fd5f548fa95e11561ece2&query=${movie}` );
   }
 
+  trending(){
+    return this.http.get<Movie[]>('https://api.themoviedb.org/3/trending/movie/day?api_key=40cdd3b4b71fd5f548fa95e11561ece2');
+  }
+
   addMovie(movie: Movie){
     return this.http.post(this.url + '/movies', movie);
   }
