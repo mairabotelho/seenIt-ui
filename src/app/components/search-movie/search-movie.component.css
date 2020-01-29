@@ -62,3 +62,69 @@
 .hvrbox.active .hvrbox-text_mobile {
 	display: block;
 }
+
+/* Modal */
+.sshow {
+	display: block;
+}
+
+.hhidden {
+    display: none;
+}
+
+.success {
+    border: 2px solid rgb(172, 137, 73);
+	color: rgb(172, 137, 73);
+	cursor: pointer;
+}
+    
+.success:hover {
+    background-color: rgb(172, 137, 73);
+    color: black;   
+}
+  
+
+.button{
+	text-align: right;
+}
+
+.button-2{
+	text-align: right;
+	margin-top: 1%;
+}
+
+.modal-header, .close, .table{
+	color: rgb(207, 207, 207);
+}
+
+.form-control{
+	background-color: rgb(207, 207, 207);
+
+}
+
+.col1{
+	width: 27%;
+}
+
+.col2{
+	text-align: justify;
+}
+
+.picture{
+	max-width: 90%;
+	min-width: 50%;
+}
+
+.user{
+	font-weight: bold;
+}
+
+.rev{
+	font-style: italic;
+}
+
+.new{
+	background-color: rgb(35, 35, 35);
+	width: 100%;
+	table-layout: fixed;
+}

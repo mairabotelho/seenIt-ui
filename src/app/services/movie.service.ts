@@ -3,6 +3,7 @@ import { Movie } from '../models/movie';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment'
 import { LocalStorageService } from 'ngx-webstorage';
+import { Review } from '../models/review';
 
 @Injectable({
   providedIn: 'root'
@@ -30,11 +31,20 @@ export class MovieService {
     return this.http.post(this.url + '/movies', movie);
   }
 
-  public getMovies(username: string) {
+  addReview(review: Review){
+    return this.http.post(this.url + '/review', review)
+  }
+
+  getMovies(username: string) {
     return this.http.get<Movie[]>(this.url + '/movies/all/' + username);
   }
 
-  public deleteMovie(username : string, id: number){
+  getReviews(movieId: number){
+    return this.http.get<Review[]>(this.url + '/review/' + movieId)
+  }
+
+
+  deleteMovie(username : string, id: number){
     let string = id.toString();
     const params = new HttpParams().set('id', string);
 

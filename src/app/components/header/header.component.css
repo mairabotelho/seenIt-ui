@@ -7,6 +7,10 @@
   opacity: 96%;
 }
 
+.collapse{
+  background: rgb(30, 30, 30);
+}
+
 .navbar-nav .nav-link{
 	color: rgb(223, 185, 104);
   cursor: pointer;

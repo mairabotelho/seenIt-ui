@@ -25,7 +25,7 @@ import { UserService } from './services/user.service';
 import { NgxWebstorageModule } from 'ngx-webstorage';
 import { MatGridListModule } from '@angular/material'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { PopUpMovieComponent } from './components/pop-up-movie/pop-up-movie.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,8 @@ import { PopUpMovieComponent } from './components/pop-up-movie/pop-up-movie.comp
 
     UserComponent,
 
-    PopUpMovieComponent,
+    ModalComponent,
+
 
   ],
 

@@ -1,15 +1,61 @@
 <mat-grid-list cols="5" rowHeight="2:3">
   <div class="results"  *ngFor="let movie of movies">
-    <mat-grid-tile class="hvrbox"> 
-        <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="{{movie.title}}">
-        <div class="hvrbox-layer_top" (click)="addMovie(movie)">
-          <div class="hvrbox-text" >{{movie.title}}</div>
+    <mat-grid-tile class="hvrbox" > 
+      <img class="img" [src]="'http://image.tmdb.org/t/p/original' + movie.poster_path" alt="{{movie.title}}"> 
+      <div class="hvrbox-layer_top" (click)="show(movie)"> 
+          <div class="hvrbox-text">{{movie.title}}</div>
       </div>
     </mat-grid-tile>
   </div>
 </mat-grid-list>
 
 
+
+<!-- Modal layout -->
+<modal id="modal_1" class="hhidden"> 
+  <div class="modal-header">
+    <h5 class="modal-title">{{current.title}}</h5>
+    <button class="close" data-dismiss="modal" aria-label="Close" (click)="close()">
+      <span class="x" aria-hidden="true">×</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+      <table class="table table-borderless">
+          <tr>
+            <td class="col1"> 
+              <div><img class="picture" [src]="'http://image.tmdb.org/t/p/w780' + current.poster_path"/></div>
+            </td>
+            <td class="col2"><div class="button"><button class="btn success" (click)="addMovie(current)">Add to list</button></div>
+              Original Title: {{current.original_title}}<br>        
+              Release Date: {{current.release_date}}<br>
+              Original Languague: {{current.original_language}}<br>
+              Popularity: {{current.popularity}}<br><br>
+              <p>{{current.overview}}</p><br>
+
+              <div class="form-group">
+                <form [formGroup]="reviewForm" (ngSubmit)="addReview()">
+                <textarea class="form-control" id="reviewPost" formControlName="newReview" placeholder="Write a review"></textarea>
+                <div class="button-2"><button type="submit" onclick="document.getElementById('reviewPost').value = ''" class="btn success">Submit</button></div>
+                </form >
+              </div>
+    
+              <div class="reviews">
+                <table class="new table-striped" *ngFor="let review of reviews">
+                    <tr>
+                      <td>
+                        <p class="user">{{review.username}}</p>
+                        <p class="rev">- "{{review.review}}"</p>  
+                      </td>
+                    </tr>
+                </table>
+            </div>
+
+            </td>
+          </tr>
+      </table>
+  </div>
+</modal>
 
 
 
