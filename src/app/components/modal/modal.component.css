@@ -1,0 +1,28 @@
+.mmodal {
+    z-index: 1000;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 60%;
+}
+
+.mmodal-body {
+	background-color: rgb(30, 30, 30);
+    margin: 5%;
+    overflow-y: auto;
+    max-height: calc(100vh - 200px);
+    height: 120%;
+}
+
+.mmodal-background {
+    z-index: 900;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0.7;
+}

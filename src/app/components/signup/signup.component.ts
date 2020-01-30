@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
-import { User } from 'src/app/models/user';
+import { User } from 'src/app/models/users';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -23,7 +23,6 @@ export class SignupComponent implements OnInit {
       lastName:'',
       email: '',
       password: '',
-      confirmPassword: ''
     });
 
     this.user = {
@@ -32,7 +31,6 @@ export class SignupComponent implements OnInit {
       lastName:'',
       email: '',
       password: '',
-      confirmPassword: ''
     };
   }
 
@@ -45,7 +43,6 @@ export class SignupComponent implements OnInit {
     this.user.lastName = this.signupForm.get('lastName').value;
     this.user.email = this.signupForm.get('email').value;
     this.user.password = this.signupForm.get('password').value;
-    this.user.confirmPassword = this.signupForm.get('confirmPassword').value;
 
     this.authService.singup(this.user).subscribe(data => {
       console.log('User created');
