@@ -1,0 +1,34 @@
+.jumbotron{
+  background: rgb(30, 30, 30);  
+  opacity: 80%; 
+  padding-top: 3%;
+  padding-bottom: 5%;
+  margin-top: 16%;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  }
+
+.display{
+  color: rgb(115, 201, 235);
+  font-size: 80px;
+}
+
+.lead, .my{
+  color: rgba(189, 189, 189, 0.897);  
+   font-size-adjust: 5px;
+}
+
+.success {
+  border-color: rgb(172, 137, 73);
+  color: rgb(172, 137, 73);
+}
+  
+.success:hover {
+  background-color: rgb(172, 137, 73);
+  color: black;   
+}
+
+.button{
+    cursor: pointer
+}

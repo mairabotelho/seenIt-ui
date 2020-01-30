@@ -23,7 +23,6 @@ export class SignupComponent implements OnInit {
       lastName:'',
       email: '',
       password: '',
-      confirmPassword: ''
     });
 
     this.user = {
@@ -32,7 +31,6 @@ export class SignupComponent implements OnInit {
       lastName:'',
       email: '',
       password: '',
-      confirmPassword: ''
     };
   }
 
@@ -45,7 +43,6 @@ export class SignupComponent implements OnInit {
     this.user.lastName = this.signupForm.get('lastName').value;
     this.user.email = this.signupForm.get('email').value;
     this.user.password = this.signupForm.get('password').value;
-    this.user.confirmPassword = this.signupForm.get('confirmPassword').value;
 
     this.authService.singup(this.user).subscribe(data => {
       console.log('User created');
